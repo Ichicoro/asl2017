@@ -45,6 +45,7 @@ li.navmenuitem {
 	padding-left: 10px;
 	cursor: inherit;
 	list-style-type: none;
+    text-decoration: none;
 }
 
 ul.navbar {
@@ -66,6 +67,22 @@ header {
     letter-spacing: 2px;
 }
 
+
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex-container::after {
+  content: '';
+  width: 100%;
+}
+.flex-item:last-child { /* or `:nth-child(n + 4)` */
+  order: 1;
+}
+
+
+
 .transparent {
     background-color: rgba(0,0,0,0);
     transition:.30s;
@@ -76,17 +93,29 @@ header {
     transition:.30s;
 }
 
-a.linku {
-	color: #f2f2f2;
+
+
+a.navbarlink {
 	text-decoration: none;
-	transition:.30s;
 	cursor: hand;
 }
 
-a.linku:hover {
-	color: #595959;
+a.navbarlink:hover {
+	color: #909090; /* This was #595959 */
 	cursor: hand;
 }
+
+.lighttext {
+    color: #f2f2f2;
+    transition:.30s;
+}
+
+.darktext {
+    color: #000000;
+    transition:.30s;
+}
+
+
 
 #pagetitle {
 	text-transform: lowercase;
@@ -99,6 +128,8 @@ span.navmenu {
 .navbar_divider {
     padding-left: 20px;
     padding-right: 20px;
+    text-decoration: none;
+    cursor: hand;
 }
 
 .bgdiv {
@@ -110,11 +141,30 @@ span.navmenu {
     background-attachment: fixed;
 }
 
+.titlediv {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 300px;
+    background-size: cover;
+    background-attachment: fixed;
+    letter-spacing: 5px;
+    font-family: "Operator Mono";
+}
+
+.clipped {
+    -webkit-clip-path: polygon(0 25%, 100% 0%, 100% 75%, 0% 100%);
+    clip-path: polygon(0 25%, 100% 0%, 100% 75%, 0% 100%);
+}
+
 .centered {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 }
+
+
 
 #top {
     background-image: url("assets/wp/bg1.png");
@@ -122,7 +172,7 @@ span.navmenu {
 
 #about {
     background-color: #FFFFFF;
-    background-image: url("assets/wp/forest.jpg");
+    /* background-image: url("assets/wp/forest.jpg"); */
 }
 
 #projects {
@@ -132,5 +182,5 @@ span.navmenu {
 }
 
 #contact {
-    background-image: url("assets/wp/bg2.jpg");
+    /* background-image: url("assets/wp/bg2.jpg"); */
 }

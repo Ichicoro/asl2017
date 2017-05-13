@@ -7,18 +7,18 @@
 	<script src="scripts/smoothscroll.js" defer></script>
 	<script src="scripts/scrollTo.js" type="text/javascript" defer></script>
 
-	<title>asl 2017</title>
+	<title>asl 2016-2017</title>
 </head>
 <body>
 
 <header id="header" class="transparent">
 	<span id="navmenu">
 		<ul class="navbar">
-			<li class="navmenuitem title_li" id="pagetitle"><a href="#top" class="linku">asl 2017</a> <!-- (now <span id="ownAge"></span>) --></li>
-			<li class="navmenuitem navbar_divider">/</li>
-			<li class="navmenuitem"><a class="linku" href="#about">about</a></li>
-			<li class="navmenuitem"><a class="linku" href="#projects">projects</a></li>
-			<li class="navmenuitem"><a class="linku" href="#contact">contact</a></li>
+			<li class="navmenuitem title_li" id="pagetitle"><a href="#top" class="navbarlink lighttext colored">asl 2017</a></li>
+			<li class="navmenuitem navbar_divider lighttext colored">/</li>
+			<li class="navmenuitem"><a class="navbarlink lighttext colored" href="#about">about</a></li>
+			<li class="navmenuitem"><a class="navbarlink lighttext colored" href="#projects">projects</a></li>
+			<li class="navmenuitem"><a class="navbarlink lighttext colored" href="#contact">contact</a></li>
 		</ul>
 	</span>
 </header>
@@ -33,11 +33,11 @@
 </div>
 
 <div class="bgdiv centered" id="about">
-	<p>This is a test. :D</p>
+	<p id="flex-item">This is a test. :D</p><br/><p id="flex-item">Coso</p>
 </div>
 
-<div class="bgdiv centered" id="projects">
-
+<div class="titlediv clipped centered" id="projects">
+	<h1>projects</h1>
 </div>
 
 <div class="bgdiv centered" id="contact">
@@ -51,7 +51,7 @@
 	var today = new Date();
 	var birthday = new Date(1999, 10, 20);
 	var age = (today - birthday)/1000/60/60/24/365.25;
-	document.getElementById("ownAge").innerHTML = Math.floor(age);
-	console.log(age);
+	//document.getElementById("ownAge").innerHTML = Math.floor(age);
+	//console.log(age);
 </script>
 </html>
