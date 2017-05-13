@@ -148,8 +148,8 @@ span.navmenu {
     height: 300px;
     background-size: cover;
     background-attachment: fixed;
-    letter-spacing: 5px;
-    font-family: "Operator Mono";
+    letter-spacing: 10px;
+    font-family: "Montserrat Light", "Montserrat";
 }
 
 .clipped {
