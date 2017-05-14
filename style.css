@@ -150,7 +150,19 @@ span.navmenu {
     background-attachment: fixed;
     letter-spacing: 10px;
     font-family: "Montserrat Light", "Montserrat";
+    height: 300px;
 }
+
+.contentdiv {
+    text-align: center;
+    font-family: "Montserrat";
+    letter-spacing: 2px;
+    color: #000000;
+    width: 100vw;
+    background-color: #FFFFFF;
+}
+
+
 
 .clipped {
     -webkit-clip-path: polygon(0 25%, 100% 0%, 100% 75%, 0% 100%);

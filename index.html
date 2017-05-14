@@ -17,8 +17,8 @@
 			<li class="navmenuitem title_li" id="pagetitle"><a href="#top" class="navbarlink lighttext colored">asl 2017</a></li>
 			<li class="navmenuitem navbar_divider lighttext colored">/</li>
 			<li class="navmenuitem"><a class="navbarlink lighttext colored" href="#opinion">test</a></li>
-			<li class="navmenuitem"><a class="navbarlink lighttext colored" href="#about">about</a></li>
 			<li class="navmenuitem"><a class="navbarlink lighttext colored" href="#projects">projects</a></li>
+			<li class="navmenuitem"><a class="navbarlink lighttext colored" href="#about">about</a></li>
 			<li class="navmenuitem"><a class="navbarlink lighttext colored" href="#contact">contact</a></li>
 		</ul>
 	</span>
@@ -37,9 +37,10 @@
 	<h1>test</h1>
 </div>
 
-<div class="bgdiv centered" id="about">
-	<p id="flex-item">This is a test. :D</p><br/><p id="flex-item">Coso</p>
+<div class="contentdiv" id="opinioncontent">
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mollis neque ligula, a commodo tellus pretium sit amet. Vestibulum non placerat ex, nec accumsan felis. Nullam at turpis diam. Donec neque mi, condimentum sed risus ac, commodo fringilla quam. Donec elementum posuere quam, at dignissim est porta sed. Cras et enim dictum magna iaculis semper. Duis ac lorem ligula. <br/>Nunc facilisis sed orci vel ullamcorper. Curabitur facilisis ut diam nec cursus. In volutpat eleifend orci et iaculis. Sed sollicitudin, tellus eget rhoncus facilisis, lectus sapien placerat leo, in blandit nisi ligula nec elit. Etiam sollicitudin quam in sapien auctor, ornare mattis arcu iaculis. Vestibulum iaculis pharetra lacus, eu imperdiet nisl viverra non. Donec cursus consectetur odio in maximus. Ut vestibulum eu libero id consectetur. Nam venenatis tempus mauris, et blandit justo sollicitudin a. Phasellus in tellus maximus, ornare erat et, semper lacus. <br/> Phasellus auctor felis sit amet turpis placerat, in condimentum orci tristique. Aenean quis dui et sapien tempor volutpat. Suspendisse feugiat sem convallis neque hendrerit scelerisque. Morbi sed dolor eu ligula interdum ultricies eget sed eros. Phasellus volutpat viverra purus ac iaculis. Etiam venenatis, lorem sed sagittis hendrerit, nunc diam convallis enim, sit amet dapibus nunc mi non nisl. Morbi nulla tortor, eleifend eu eleifend a, maximus sit amet odio. Cras feugiat libero lectus. <br/> Fusce molestie erat velit, id tempus dolor molestie luctus. Aliquam quis maximus massa. Praesent id ante fermentum massa eleifend pellentesque. Donec dictum blandit quam, a interdum turpis fringilla ut. Quisque bibendum odio massa, nec sollicitudin libero tempor a. Morbi finibus sem nunc, in iaculis mauris mattis finibus. Nam cursus ante sed lacus laoreet, at suscipit sapien fringilla. Praesent ut nulla nec tortor pellentesque tincidunt eget et ante. Cras tincidunt arcu vel est lacinia congue. <br/> Vestibulum quis sodales tortor, nec sollicitudin nisl. Vestibulum vel felis vehicula, facilisis libero in, sodales dolor. Proin ac sem sit amet arcu finibus efficitur vitae quis enim. Nulla in dapibus enim, quis malesuada nunc. Suspendisse sit amet mi convallis, varius nibh quis, interdum felis. Aenean at nunc vestibulum, ultrices enim tempor, cursus ipsum. Vivamus sodales pulvinar ante, ut suscipit arcu tincidunt nec. Nullam dictum auctor est non mattis. Sed et lobortis nisl, ut pellentesque mauris.</p>
 </div>
+
 
 <div class="titlediv clipped centered" id="projects">
 	<h1>projects</h1>
@@ -49,6 +50,9 @@
 
 </div>
 
+<div class="bgdiv centered" id="about">
+	<p id="flex-item">This is a test. :D</p><br/><p id="flex-item">Coso</p>
+</div>
 
 
 </body>
@@ -58,5 +62,8 @@
 	var age = (today - birthday)/1000/60/60/24/365.25;
 	//document.getElementById("ownAge").innerHTML = Math.floor(age);
 	//console.log(age);
+	$(document).ready(() => {
+		$("#opinioncontent").html();
+	})
 </script>
 </html>
