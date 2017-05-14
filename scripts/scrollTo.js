@@ -6,11 +6,11 @@ $(document).on('scroll', () => {
 			$(e).removeClass("lighttext").addClass("darktext");
 		}
 		
-		if ($(document).scrollTop() - parseInt(51) >=$('#projects').position().top) {
+		if ($(document).scrollTop() - parseInt(25) >=$('#projects').position().top) {
 			$(e).removeClass("darktext").addClass("lighttext");
 		}
 
-		if($(document).scrollTop() + parseInt(51) >=$('#contact').position().top) {
+		if($(document).scrollTop() + parseInt(40) >=$('#contact').position().top) {
 			$(e).removeClass("lighttext").addClass("darktext");
 		}
 	})

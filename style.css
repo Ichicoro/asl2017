@@ -157,6 +157,11 @@ span.navmenu {
     clip-path: polygon(0 25%, 100% 0%, 100% 75%, 0% 100%);
 }
 
+.clippedtop {
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 75%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% 75%, 0% 100%);
+}
+
 .centered {
     display: flex;
     flex-wrap: wrap;
@@ -175,9 +180,15 @@ span.navmenu {
     /* background-image: url("assets/wp/forest.jpg"); */
 }
 
+#opinion {
+    background-color: #FFFFFF;
+    background-position: right top;
+    background-image: url("assets/wp/bg1.png");
+}
+
 #projects {
     background-color: #FFFFFF;
-    background-image: url("assets/wp/bg1.png");
+    background-image: url("assets/wp/forest.jpg");
     background-position: right top;
 }
 
