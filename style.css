@@ -155,6 +155,7 @@ span.navmenu {
     height: 300px;
     background-size: cover;
     background-attachment: fixed;
+    background-position: center top;
     letter-spacing: 10px;
     font-family: "Montserrat Light", "Montserrat";
     height: 200px;
