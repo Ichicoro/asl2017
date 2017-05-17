@@ -82,6 +82,11 @@ header {
   order: 1;
 }
 
+#cosotop {
+    display: block;
+    letter-spacing: 2px;
+}
+
 
 
 .transparent {
