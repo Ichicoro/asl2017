@@ -30,6 +30,7 @@ body {
     margin: 0px;
     text-align: center;
     background-color: #fff;
+    display:block;
 }
 
 ::selection {
@@ -102,6 +103,13 @@ header {
 .whitebg {
     background-color: rgba(255,255,255,1);
     transition:.30s;
+}
+
+
+#websitetitle {
+    font-size: 72px;
+    letter-spacing: 8px;
+    font-weight: 400;
 }
 
 
@@ -199,6 +207,13 @@ span.navmenu {
     justify-content: center;
 }
 
+.lefted {
+    /* width: 75vw; */
+    text-align: left;
+    padding-left: 12.5vw;
+    width: 75vw;
+}
+
 
 th, td {
     text-align: left;
@@ -225,7 +240,13 @@ th, td {
     background-image: url("assets/wp/bg1.png");
 }
 
-#projects {
+#activities {
+    background-color: #FFFFFF;
+    background-image: url("assets/wp/forest.jpg");
+    background-position: center top;
+}
+
+#isobus {
     background-color: #FFFFFF;
     background-image: url("assets/wp/forest.jpg");
     background-position: center top;

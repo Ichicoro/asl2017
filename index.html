@@ -21,7 +21,8 @@
 			<li class="navmenuitem title_li" id="pagetitle"><a href="#top" class="navbarlink lighttext colored">asl 2017</a></li>
 			<li class="navmenuitem navbar_divider lighttext colored" id="slantedtoggle">/</li>
 			<li class="navmenuitem"><a class="navbarlink lighttext colored hideable" href="#opinion">opinione</a></li>
-			<li class="navmenuitem"><a class="navbarlink lighttext colored hideable" href="#projects">attività</a></li>
+			<li class="navmenuitem"><a class="navbarlink lighttext colored hideable" href="#activities">attività</a></li>
+			<li class="navmenuitem"><a class="navbarlink lighttext colored hideable" href="#isobus">isobus</a></li>
 			<li class="navmenuitem"><a class="navbarlink lighttext colored hideable" href="#about">about</a></li>
 			<li class="navmenuitem"><a class="navbarlink lighttext colored hideable" href="#contact">contact</a></li>
 		</ul>
@@ -32,7 +33,7 @@
 	<!-- <span class="">
 		<img src="assets/icons/github-light.png" />
 	</span> -->
-    <div id="cosotop"><h1>Test</h1>
+    <div id="cosotop"><h1 id="websitetitle">asl 2017</h1>
 
     <p>ciaone</p></div>
 </div>
@@ -46,12 +47,85 @@
 </div>
 
 
-<div class="titlediv centered" id="projects">
+<div class="titlediv centered" id="activities">
 	<h1>lista delle attività</h1>
 </div>
 
-<div class="contentdiv centered" id="timetablecontent">
+<div class="contentdiv centered" id="activitiescontent">
 	<table id="tabella"><tr><td>03-05-2017</td><td>1 ora</td><td>Progetto sprar  (ALFREDO CENINI) </td></tr><tr><td>17-02-2017</td><td>2 ore</td><td>(ILARIA BERTOLETTI - ANNA MARIA VINSANI)  </td></tr><tr><td>05-12-2016</td><td>2 ore</td><td>Correzione esercizi prova formativa. Circuiti in corren ...  (PAOLA TURCI) </td></tr><tr><td>25-11-2016</td><td>4 ore</td><td>ASL:Tecnopolo  (DANIELA TAGLIAZUCCHI) </td></tr><tr><td>23-11-2016</td><td>1 ora</td><td>Presentazione ASL  (NICOLETTA MATTERA) </td></tr><tr><td>15-11-2016</td><td>5 ore</td><td>Musei civici  (MARCELLO ALTOMARI) </td></tr><tr><td>26-10-2016</td><td>4 ore</td><td>Conferenza Tecnopolo  (ALFREDO CENINI) </td></tr><tr><td>20-10-2016</td><td>5 ore</td><td>Giornata presso tecnopolo di Reggio Emilia  (MARIACRISTINA CULZONI) </td></tr><tr><td>17-10-2016</td><td>5 ore</td><td>Giornata presso il tecnopolo di Reggio Emilia  (PAOLA TURCI) </td></tr><tr><td>14-10-2016</td><td>5 ore</td><td>Giornata al tecnopolo di Reggio Emilia  (ILARIA BERTOLETTI) </td></tr><tr><td></td></tr><tr><td>28-03-2017</td><td>1 ora</td><td>Unix: testo sulla didattica.  (DANIELA TAGLIAZUCCHI) </td></tr><tr><td>21-03-2017</td><td>1 ora</td><td>Summary writing: UBUNTU  (DANIELA TAGLIAZUCCHI) </td></tr><tr><td>17-02-2017</td><td>1 ora</td><td>Seminario " Intelligenze digitali"  (DANIELA TAGLIAZUCCHI) </td></tr><tr><td></td></tr></table>
+</div>
+
+<div class="titlediv centered" id="isobus">
+	<h1>isobus</h1>
+</div>
+
+<div class="contentdiv lefted" id="isobuscontent">
+	<p>In un'automobile ci sono più centraline che tra di loro comunicano attraverso uno standard “CAN Automotif” (metà standard e metà “libero”). 3 livelli sono obbligatori, altri sono liberi. Ogni funzionalità in una automobile è gestita da una determinata centralina. Tutte queste centraline comunicano tra di loro. Per qualche parte il linguaggio usato è standardizzato, per altre no.</p>
+	<p>Stessa cosa nei trattori (SAEJ 1939): il trattore ha una rete CAN proprietaria, e anche l'attrezzo.</p>
+	<p>C'è anche un Terminale Virtuale necessario per interfacciare l'attrezzo e l'utente.</p>
+	<p>La trattrice, usando un Giunto Cardanico, può trasferire forza meccanica all'attrezzo.</p>
+	
+	<p><strong>Potenza = coppia * numero di giri [W]</strong></p>
+	
+	<p>Trattori e attrezzi hanno tutti la stessa PTO a seguito di una UNIFICAZIONE delle stesse. </p>
+	<p>La risposta? ISOBUS (ISO 11783). ISOBUS permette la comunicazione. Il segnale è differenziale (due cavi per eliminare i disturbi) e i cavi sono twistati (il passo è in base alla frequenza di cui voglio evitare i disturbi (rip italiano)).</p>
+	<p>I due canali sono CAN HIGH e CAN LOW.</p>
+	<p>La resistenza deve essere 120Ohm, ovvero la resistenza degli ultimi 3 metri del cavo twistato. </p>
+	<p>I vari poli del connettore Implement Bus Breakaway Connector (IBBC) sono:</p>
+	<ul>
+	<li>CAN_HIGH</li>
+	<li>CAN_LOW</li>
+	<li>ECU_POWER</li>
+	<li>ECU_GROUND</li>
+	<li>PWR</li>
+	<li>GND</li>
+	<li>TBC_PWR</li>
+	<li>TBC_RTN</li>
+	<li>TBC_DIS</li></ul>
+	<p>Terminating Bias Circuit (TBC) è…</p>
+	<p>Nell’IBBC c'è un terminale master (nella trattrice) e uno slave (nell'attrezzo).</p>
+
+
+	<p><img src="cid:Image_0.jpg" /></p>
+	<p>ISOBUS multimaster network:</p>
+	<ul><li>Non abbiamo un dispositivo master;</li>
+	<li>I messaggi vengono inviati a tutti i dispositivi e tutti i dispositivi inviano messaggi </li>
+	<li>Avviene un arbitraggio per stabilire chi continua la comunicazione </li>
+	<li>L’arbitraggio avviene sul Can Controller </li>
+	<li>Sul Can transceiver avviene inversione del segnale</li>
+	<li> Frequenza bit 250 kHz </li></ul>
+	
+	<p><img src="cid:Image_1.jpg" /></p>
+	<p>Bus level invertito!</p>
+
+	<p>Tractor Electronic Control Unit (TECU) → funge da Gateway fra la rete SAEJ1939 propria della trattrice e il Network ISOBUS.</p>
+	
+	<p>Cosa vuol dire essere compatibile con un isobus?</p>
+	
+	<p>Rispettare uno standard software</p>
+	<ul><li>Rispettare parametri comuni sulla comunicazione riferimento ISO 1173</li></ul></ul>
+	
+	<p>Rispettare uno standard Hardware </p>
+	<ul><li>Rispettare grandezze a livello hardware rispettare parametri comuni nelle tempistiche, nelle caratteristiche di trasmissione e nell’arbitraggio</li></ul></ul>
+	<p>Ecco come si ottiene la CONFORMITA’ ISOBUS</p>
+
+
+
+	<p>In conclusione lo standard ISOBUS ha varie parti:</p>
+	<ol><li>General standard for mobile communication</li>
+	<li>Physical layer </li>
+	<li>Data link layer </li>
+	<li>Network layer </li>
+	<li>Network management </li>
+	<li>Virtual terminal </li>
+	<li>Implements messages application layer </li>
+	<li>Power train messages</li>
+	<li>Tractor ECU</li>
+	<li>Task controller and management information system data interchange </li>
+	<li>Mobile data element dictionary </li>
+	<li>Diagnostics services </li>
+	<li>File server </li>
+	<li>Sequence control </li></ol>
 </div>
 
 <div class="bgdiv centered" id="contact">

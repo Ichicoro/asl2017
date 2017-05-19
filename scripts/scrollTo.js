@@ -10,16 +10,24 @@ $(document).on('scroll', () => {
 			toDark(e);
 		}
 		
-		if ($(document).scrollTop() + parseInt(25) >=$('#projects').position().top) {
+		if ($(document).scrollTop() + parseInt(25) >=$('#activities').position().top) {
 			toWhite(e);
+		}
+
+		if($(document).scrollTop() + parseInt(25) >=$('#activitiescontent').position().top) {
+			toDark(e);
+		}
+
+		if ($(document).scrollTop() + parseInt(25) >=$('#isobus').position().top) {
+			toWhite(e);
+		}
+
+		if($(document).scrollTop() + parseInt(25) >=$('#isobuscontent').position().top) {
+			toDark(e);
 		}
 
 		if($(document).scrollTop() + parseInt(25) >=$('#contact').position().top) {
 			toWhite(e);
-		}
-
-		if($(document).scrollTop() + parseInt(25) >=$('#timetablecontent').position().top) {
-			toDark(e);
 		}
 	})
 })
