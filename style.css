@@ -223,6 +223,10 @@ th, td {
     padding-right: 14px;
 }
 
+img {
+    max-width: 75vw;
+}
+
 
 
 #top {
@@ -239,8 +243,8 @@ th, td {
     background-position: center top;
     background-image: url("assets/wp/bg1.png");
 }
-
 #activities {
+
     background-color: #FFFFFF;
     background-image: url("assets/wp/forest.jpg");
     background-position: center top;
@@ -248,10 +252,38 @@ th, td {
 
 #isobus {
     background-color: #FFFFFF;
-    background-image: url("assets/wp/forest.jpg");
+    background-image: url("assets/wp/isobus.jpg");
     background-position: center top;
 }
 
-#contact {
-    /* background-image: url("assets/wp/bg2.jpg"); */
+#nonnobit {
+    background-color: #FFFFFF;
+    background-image: url("assets/wp/tasiera_ancora_meno_etero.jpg");
+    background-position: center top;
+}
+
+#multimedia {
+    background-color: #FFFFFF;
+    background-image: url("assets/wp/lucca.jpg");
+    background-position: center top;
+}
+
+#sprar {
+    background-color: #FFFFFF;
+    background-image: url("assets/wp/lucca.jpg");
+    background-position: center top;
+}
+
+.button {
+    padding: 15px 15px 15px 15px;
+    border: 2px solid #101010;
+    color: #101010;
+    font-family: "Montserrat";
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: lowercase;
+    font-size: 22px;
+    cursor: hand;
+    text-decoration: none;
+    /* background-color: #dfdfdf; */
 }

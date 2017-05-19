@@ -5,10 +5,6 @@ $(document).on('scroll', () => {
 		if ($(document).scrollTop() + parseInt(25) >=$('#opinioncontent').position().top) {
 			toDark(e);
 		}
-
-		if ($(document).scrollTop() + parseInt(25) >=$('#about').position().top) {
-			toDark(e);
-		}
 		
 		if ($(document).scrollTop() + parseInt(25) >=$('#activities').position().top) {
 			toWhite(e);
@@ -26,8 +22,20 @@ $(document).on('scroll', () => {
 			toDark(e);
 		}
 
-		if($(document).scrollTop() + parseInt(25) >=$('#contact').position().top) {
+		if ($(document).scrollTop() + parseInt(25) >=$('#nonnobit').position().top) {
 			toWhite(e);
+		}
+
+		if($(document).scrollTop() + parseInt(25) >=$('#nonnobitcontent').position().top) {
+			toDark(e);
+		}
+
+		if ($(document).scrollTop() + parseInt(25) >=$('#multimedia').position().top) {
+			toWhite(e);
+		}
+
+		if($(document).scrollTop() + parseInt(25) >=$('#multimediacontent').position().top) {
+			toDark(e);
 		}
 	})
 })
