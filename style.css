@@ -92,6 +92,7 @@ header {
 
 .transparent {
     background-color: rgba(0,0,0,0);
+    color: rgb(255,255,255);
     transition:.30s;
 }
 
@@ -103,6 +104,7 @@ header {
 .whitebg {
     background-color: rgba(255,255,255,1);
     transition:.30s;
+    color: rgba(0,0,0,1);
 }
 
 
@@ -270,7 +272,7 @@ img {
 
 #sprar {
     background-color: #FFFFFF;
-    background-image: url("assets/wp/lucca.jpg");
+    background-image: url("assets/wp/sprar.jpg");
     background-position: center top;
 }
 

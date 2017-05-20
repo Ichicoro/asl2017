@@ -1,40 +1,44 @@
+var doc = $(document);
+var opinioncontent = $('#opinioncontent')
+var activities = $('#activities').position().top
+var activitiescontent = $('#activitiescontent').position().top
+var isobus = $('#isobus').position().top
+var isobuscontent = $('#isobuscontent').position().top
+var nonnobit = $('#nonnobit').position().top
+var nonnobitcontent = $('#nonnobitcontent').position().top
+var multimedia = $('#multimedia').position().top
+var multimediacontent = $('#multimediacontent').position().top
+var sprar = $('#sprar').position().top
+var sprarcontent = $('#sprarcontent').position().top
+var headerr = $("#header")
+
 $(document).on('scroll', () => {
 	$(".colored").each((i, e) => {
 		toWhite(e);
+		posonpage = doc.scrollTop();
 
-		if ($(document).scrollTop() + parseInt(25) >=$('#opinioncontent').position().top) {
-			toDark(e);
-		}
 		
-		if ($(document).scrollTop() + parseInt(25) >=$('#activities').position().top) {
-			toWhite(e);
-		}
-
-		if($(document).scrollTop() + parseInt(25) >=$('#activitiescontent').position().top) {
+		if(posonpage + 25 >=sprarcontent) {
 			toDark(e);
-		}
-
-		if ($(document).scrollTop() + parseInt(25) >=$('#isobus').position().top) {
+		} else if (posonpage + 25 >=sprar) {
 			toWhite(e);
-		}
-
-		if($(document).scrollTop() + parseInt(25) >=$('#isobuscontent').position().top) {
+		} else if(posonpage + 25 >=multimediacontent) {
 			toDark(e);
-		}
-
-		if ($(document).scrollTop() + parseInt(25) >=$('#nonnobit').position().top) {
+		} else if (posonpage + 25 >=multimedia) {
 			toWhite(e);
-		}
-
-		if($(document).scrollTop() + parseInt(25) >=$('#nonnobitcontent').position().top) {
+		} else if(posonpage + 25 >=nonnobitcontent) {
 			toDark(e);
-		}
-
-		if ($(document).scrollTop() + parseInt(25) >=$('#multimedia').position().top) {
+		} else if (posonpage + 25 >=nonnobit) {
 			toWhite(e);
-		}
-
-		if($(document).scrollTop() + parseInt(25) >=$('#multimediacontent').position().top) {
+		} else if(posonpage + 25 >=isobuscontent) {
+			toDark(e);
+		} else if (posonpage + 25 >=isobus) {
+			toWhite(e);
+		} else if(posonpage + 25 >=activitiescontent) {
+			toDark(e);
+		} else if (posonpage + 25 >=activities) {
+			toWhite(e);
+		} else if (posonpage + 25 >=opinioncontent) {
 			toDark(e);
 		}
 	})
@@ -42,10 +46,10 @@ $(document).on('scroll', () => {
 
 var toWhite = (e) => {
 	$(e).removeClass("darktext").addClass("lighttext");
-	$("#header").removeClass("whitebg").addClass("transparent");
+	headerr.removeClass("whitebg").addClass("transparent");
 }
 
 var toDark = (e) => {
 	$(e).removeClass("lighttext").addClass("darktext");
-	$("#header").removeClass("transparent").addClass("whitebg");
+	headerr.removeClass("transparent").addClass("whitebg");
 }
